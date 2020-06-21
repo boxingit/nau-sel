@@ -15,7 +15,7 @@ public class FirstTest {
         //Tells the system where the chromedriver executable is located
         System.setProperty("webdriver.chrome.driver", "resources/mac/chromedriver");
 
-        //For windows give the path as follows
+        //For windows give the path as follows and comment out above line.
         //System.setProperty("webdriver.chrome.driver", "resources/windows/chromedriver.exe");
 
         //Create a WebDriver object
@@ -23,6 +23,17 @@ public class FirstTest {
 
         //Open the website / go to the URL given
         driver.get("https://the-internet.herokuapp.com/");
+
+
+        /*
+        driver.get() is used to navigate particular URL(website) and wait till page load.
+        driver.navigate().to() is used to navigate to particular URL and does not wait until the page load.
+
+        It maintains browser history or cookies to navigate back or forward.
+        */
+//        driver.navigate().to("https://the-internet.herokuapp.com/");
+//        driver.navigate().back();
+//        driver.navigate().forward();
 
         //At the end of the test kill the browser
         driver.quit();
