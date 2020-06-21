@@ -35,6 +35,13 @@ public class FirstTest {
 //        driver.navigate().back();
 //        driver.navigate().forward();
 
+
+          //Verify tge page title is correct
+
+
+
+
+
         //At the end of the test kill the browser
         driver.quit();
 
