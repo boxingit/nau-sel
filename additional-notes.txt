@@ -3,23 +3,22 @@
 2. Open Windows cmd line or Mac terminal in a folder that you want to keep this project
 3. run this cmd: git clone https://github.com/boxingit/nau-selenium.git
 
-4. to  get latest version of the project run below cmd:
- git pull
+4. To  get latest version of the project run below cmd: git pull
 
-5. Guys you cannot work on master branch.
-On your IntelliJ terminal run these commands.
-	1. create a new beanch: git branch yourName
+5. Do not work on master branch. On your IntelliJ terminal run these commands.
+	1. create a new branch: git branch yourName
 	2. move to that branch: git checkout yourName
 
-6. In order to get the lastest version from my master branch you will have to run below commands:
-
-git checkout master
-git pull
-
-
+6. In order to get the latest version from my master branch you will have to run below commands:
+    1. git checkout master
+    2. git pull
 
 7. When you work on your branch you will need to save your code. And this is how you do it.
-
 	1. git status (this command will tell you in which file you made those changes)
 	2. git add file/path (Ex: git add src/test/java/foundation/FirstTest.java)
 	3. git commit -m"Add page title test case"
+
+8.  How to move (checkout) to branch "selenium-review-6-21-2020"
+    1. first save your codes in your branch (do git commit)
+    2. git fetch
+    3. git checkout selenium-review-6-21-2020
