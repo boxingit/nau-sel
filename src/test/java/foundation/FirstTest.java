@@ -2,6 +2,7 @@ package foundation;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 /**
  * In this class I will demo how to execute/run Selenium test
@@ -36,11 +37,20 @@ public class FirstTest {
 //        driver.navigate().forward();
 
 
-          //Verify tge page title is correct
+        //Verify tge page title is correct
+        String expectedTitle = "The Internet";
+        String actualTitle = driver.getTitle();
 
+        Assert.assertEquals(actualTitle, expectedTitle, "Hey Dad, my test failed. Because the page title is wrong!");
 
+// Uncomment below lines to catch the exception so that program execution
+// does not halt.
 
-
+//        try {
+//            Assert.assertEquals(actualTitle, expectedTitle, "Hey Dad, my test failed. Because the page title is wrong!");
+//        } catch (AssertionError e) {
+//            System.err.println("\nException handled");
+//        }
 
         //At the end of the test kill the browser
         driver.quit();
