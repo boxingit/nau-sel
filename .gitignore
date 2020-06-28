@@ -3,3 +3,4 @@
 .idea/
 nau-selenium.iml
 target/
+.DS_Store
