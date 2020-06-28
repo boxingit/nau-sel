@@ -1,7 +1,9 @@
 package foundation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -41,5 +43,18 @@ public class SecondTest {
                 "Sorry mom, I could not verify the page title :(");
     }
 
+    //More detailed explanation about driver.navigate().to() method
 
+
+    @Test
+    public void testNavigateToMethod() {
+        driver.get("https://the-internet.herokuapp.com/");
+        WebElement abTesting = driver.findElement(By.xpath("//a[.='A/B Testing']"));
+        abTesting.click();
+
+        driver.navigate().back();
+
+        driver.navigate().forward();
+
+    }
 }
