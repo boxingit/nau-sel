@@ -22,3 +22,51 @@
     1. first save your codes in your branch (do git commit)
     2. git fetch
     3. git checkout selenium-review-6-21-2020
+
+9. Some info about web elements:
+   =============================
+
+   <a
+   	href="/abtest">A/B Testing<
+   /a>
+
+   a = tag
+
+   href = attribute
+
+   "/abtest" = attribute value
+
+   A/B Testing = text
+
+   xpath locator for the above element
+   //a[text()='A/B Testing']
+   //a[.='A/B Testing']
+
+   How to get my code:
+   ===================
+
+   Scenario 1:
+   If you are on your own branch you will need to save your code before switching to my branch (selenium-review-6-28-2020). For that follow below steps.
+
+   1. git add .
+   2. git commit -m"message"
+   3. git fetch
+   4. git checkout selenium-review-6-28-2020
+   5. git pull
+
+   Scenario 2: (DONOT DO GIT ADD/GIT COMMIT on my branch,
+   Do not write code on my brancg please...)
+
+   If you decide to write code on my branch (selenium-review-6-28-2020) then you will need to delete whatever you wrote in order to get my code. Follow below steps:
+
+   1. git status (this will tell in what files you made changes. Lets assume you made changes in file1 and file2)
+   2. git restore file1 file2 (this will delete what ever you wrote in file1 and file2)
+   3. git pull
+
+
+10. Access modifiers:
+
+    public - is accessible from everywhere
+    protected - is accesible for the classess that are in the same package and for classes that extend the class
+    default - is accessible for the classess that are in the same package
+    private - is accessible only inside the class (you cannot access anywhere outside the class)
