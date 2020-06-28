@@ -53,6 +53,10 @@ public class FirstTest {
 //        }
 
         //At the end of the test kill the browser
+
+        //More detailed explanation of navigate() method
+
+
         driver.quit();
 
     }
