@@ -27,9 +27,26 @@ public class ABTesting extends BasePage {
         Assert.assertTrue(actualHeader.contains("A/B Test"));
         Assert.assertTrue(actualHeader.startsWith("A/B Test"));
 
+        /*
+
+        This is TestNg Error msg
+        java.lang.AssertionError: expected [true] but found [false]
+        Expected :true
+        Actual   :false
+
+        This is is hamcrest assertion error msg
+        java.lang.AssertionError:
+        Expected: a string containing "A//B Test"
+             but: was "A/B Test Variation 1"
+        Expected :A//B Test
+        Actual   :A/B Test Variation 1
+
+        *
+        * */
+
 
         //TODO: Above use hamcrest assertion as header value is dynamic
-        assertThat(actualHeader, containsString("A/B Test"));
+        assertThat(actualHeader, containsString("A//B Test"));
         assertThat(actualHeader, startsWith("A/B Test"));
         //assertThat(actualHeader, endsWith("A/B Test"));
         //assertThat(actualHeader, is("A/B Test"));
