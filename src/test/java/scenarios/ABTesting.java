@@ -1,6 +1,7 @@
 package scenarios;
 
-import foundation.BasePage;
+import base.BasePage;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -14,13 +15,12 @@ public class ABTesting extends BasePage {
         driver.get("http://the-internet.herokuapp.com/");
         WebElement abTesting = driver.findElement(By.xpath("//a[.='A/B Testing']"));
         abTesting.click();
-
-        WebElement header = driver.findElement(By.xpath("//h3[.='A/B Test Control']"));
-
+        WebElement header = driver.findElement(By.tagName("h3"));
         String actualHeader = header.getText();
         String expectedHeader = "A/B Test Control";
-
         Assert.assertEquals(actualHeader, expectedHeader, "Header value is not right!");
+
+        //TODO: Above use hamcrest assertion as header value is dynamic
 
     }
 }

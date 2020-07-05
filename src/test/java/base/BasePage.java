@@ -1,4 +1,4 @@
-package foundation;
+package base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -25,4 +25,5 @@ public class BasePage {
     public void tearDown() {
         driver.quit();
     }
+
 }

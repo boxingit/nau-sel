@@ -69,4 +69,4 @@
     public - is accessible from everywhere
     protected - is accesible for the classess that are in the same package and for classes that extend the class
     default - is accessible for the classess that are in the same package
-    private - is accessible only inside the class (you cannot access anywhere outside the class)
+    private - is accessible only inside te class (you cannot access anywhere outside the class)

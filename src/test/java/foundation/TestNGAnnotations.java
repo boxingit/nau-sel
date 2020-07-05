@@ -18,7 +18,7 @@ import org.testng.annotations.*;
  *    AfterTest
  */
 
-public class TestNGAnnotationsDemo {
+public class TestNGAnnotations {
 
     @BeforeClass
     public void beforeClassDemo() {
