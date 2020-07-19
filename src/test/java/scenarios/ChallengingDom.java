@@ -22,12 +22,7 @@ public class ChallengingDom extends BasePage {
         WebElement blueButton = driver.findElement(By.xpath("//a[@class='button']"));
         WebElement redButton = driver.findElement(By.xpath("//a[@class='button alert']"));
         WebElement greenButton = driver.findElement(By.xpath("//a[@class='button alert']"));
-
-        //Assert.assertTrue(isClicked(blueButton), "Blue button was not clicked!");
-        Assert.assertTrue(isClicked(redButton), "Red button was not clicked!");
-        //Assert.assertTrue(isClicked(greenButton), "Green button was not clicked!");
-
-
+        blueButton.click();
     }
 
     @Test
@@ -61,23 +56,5 @@ public class ChallengingDom extends BasePage {
             System.out.println(editDelete.getText());
         }
     }
-
-
-
-
-
-    public boolean isClicked(WebElement element) {
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, 5);
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-            element.click();
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-
-
-    }
-
 
 }
